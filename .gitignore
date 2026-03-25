@@ -1,0 +1,99 @@
+# ============================================================
+# GovBot KR — .gitignore
+# ============================================================
+
+# 환경 설정 (민감정보 포함 — 절대 커밋 금지)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+*.pyo
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.lcov
+nosetests.xml
+test-results/
+
+# mypy / type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Docker
+*.override.yml
+
+# 데이터베이스 / 벡터DB
+*.db
+*.sqlite
+*.sqlite3
+chroma_data/
+postgres_data/
+redis_data/
+
+# 로그
+*.log
+logs/
+
+# 업로드된 파일 (운영 환경)
+uploads/
+media/
+
+# Alembic 자동생성 제외 대상
+# (versions/ 는 포함)
+alembic/versions/*.pyc
+
+# 모델 캐시 (허깅페이스 등 — 용량 큼)
+.cache/
+models/
+*.bin
+*.safetensors
+sentence_transformers/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

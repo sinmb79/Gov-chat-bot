@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GovBot KR 웹 채팅 위젯 데모</title>
+  <style>
+    body { font-family: 'Apple SD Gothic Neo', sans-serif; background: #f0f4f8; margin: 0; padding: 40px; }
+    .hero { max-width: 700px; margin: 0 auto; }
+    h1 { color: #1a2540; margin-bottom: 8px; }
+    p { color: #6b7280; line-height: 1.6; margin-bottom: 20px; }
+    pre { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; font-size: 13px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🏛️ GovBot KR 위젯 데모</h1>
+    <p>오른쪽 아래의 💬 버튼을 클릭하여 채팅 위젯을 확인하세요.</p>
+    <p>지자체 홈페이지에 아래 코드 한 줄을 추가하면 위젯이 활성화됩니다.</p>
+    <pre>&lt;script
+  src="https://your-server.com/widget/govbot-widget.js"
+  data-tenant="your-tenant-slug"
+  data-api="https://your-api.com"
+  data-title="AI 민원 도우미"
+  data-color="#2563eb"
+&gt;&lt;/script&gt;</pre>
+  </div>
+
+  <!-- 위젯 삽입 예시 (로컬 API 사용) -->
+  <script
+    src="./govbot-widget.js"
+    data-tenant="demo"
+    data-api="http://localhost:8000"
+    data-title="AI 민원 도우미"
+    data-color="#2563eb"
+  ></script>
+</body>
+</html>
