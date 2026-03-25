@@ -7,7 +7,7 @@ import sys
 
 
 async def main():
-    print("=== GovBot KR 관리자 계정 생성 ===\n")
+    print("=== SmartBot KR 관리자 계정 생성 ===\n")
 
     tenant_id = input("테넌트 ID (예: dongducheon): ").strip()
     if not tenant_id:

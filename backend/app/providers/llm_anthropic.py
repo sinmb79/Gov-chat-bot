@@ -7,7 +7,7 @@ from typing import Optional
 
 from app.providers.llm import LLMProvider
 
-SYSTEM_PROMPT_TEMPLATE = """당신은 {tenant_name}의 민원 안내 AI입니다.
+SYSTEM_PROMPT_TEMPLATE = """당신은 {tenant_name}AI 안내 도우미입니다.
 반드시 아래 근거 문서에 있는 내용만을 바탕으로 답변하세요.
 근거 없는 내용은 절대 추측하거나 생성하지 마세요.
 
@@ -15,7 +15,7 @@ SYSTEM_PROMPT_TEMPLATE = """당신은 {tenant_name}의 민원 안내 AI입니다
 {context}
 
 규칙:
-1. 근거 문서에 없는 내용은 "담당 부서에 문의해 주세요"로 안내
+1. 근거 문서에 없는 내용은 "담당자에게 문의해 주세요"로 안내
 2. 답변은 간결하고 명확하게 (3문장 이내)
 3. 전문 용어는 쉬운 말로 바꿔 설명
 """

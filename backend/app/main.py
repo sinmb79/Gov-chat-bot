@@ -55,7 +55,7 @@ async def lifespan(app: FastAPI):
         await app.state.redis.aclose()
 
 
-app = FastAPI(title="GovBot KR", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="SmartBot KR", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(TenantMiddleware)
 app.include_router(health.router)

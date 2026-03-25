@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     JWT_EXPIRE_HOURS: int = 24
 
     # 데이터베이스
-    DATABASE_URL: str = "postgresql+asyncpg://govbot:govbot@db:5432/govbot"
+    DATABASE_URL: str = "postgresql+asyncpg://botuser:botpass@db:5432/smartbot"
     REDIS_URL: str = "redis://redis:6379"
 
     # 벡터DB
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     IDEMPOTENCY_TTL_SECONDS: int = 60
 
     # Admin 초기값
-    ADMIN_DEFAULT_EMAIL: str = "sysadmin@govbot.kr"
+    ADMIN_DEFAULT_EMAIL: str = "admin@smartbot.kr"
     ADMIN_DEFAULT_PASSWORD: str = "changeme123!"
 
     # CORS

@@ -13,7 +13,7 @@ from app.models.knowledge import CrawlerURL, Document
 
 
 CRAWLER_HEADERS = {
-    "User-Agent": "GovBot-KR/1.0 (+https://github.com/22blabs/govbot-kr)",
+    "User-Agent": "SmartBot-KR/1.0 (+https://github.com/sinmb79/Gov-chat-bot)",
 }
 CRAWL_TIMEOUT = 15  # 초
 
@@ -36,7 +36,7 @@ async def check_robots_txt(base_url: str, target_path: str) -> bool:
                 line = line.strip()
                 if line.startswith("user-agent:"):
                     agent = line.split(":", 1)[1].strip()
-                    in_block = agent in ("*", "govbot-kr")
+                    in_block = agent in ("*", "smartbot-kr")
                 elif in_block and line.startswith("disallow:"):
                     disallowed = line.split(":", 1)[1].strip()
                     if disallowed and target_path.startswith(disallowed):

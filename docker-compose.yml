@@ -4,13 +4,13 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: govbot
-      POSTGRES_PASSWORD: govbot
-      POSTGRES_DB: govbot
+      POSTGRES_USER: botuser
+      POSTGRES_PASSWORD: botpass
+      POSTGRES_DB: smartbot
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U govbot"]
+      test: ["CMD-SHELL", "pg_isready -U botuser"]
       interval: 10s
       timeout: 5s
       retries: 5

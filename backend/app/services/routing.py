@@ -155,10 +155,11 @@ class ResponseRouter:
         # 근거 기반 LLM 재서술
         context_chunks = [r.chunk_text for r in rag_results[:3]]
         context_str = "\n---\n".join(context_chunks)
-        tenant_name = self.tenant_config.get("tenant_name", "담당 기관")
+        tenant_name = self.tenant_config.get("tenant_name", "")
+        name_prefix = f"{tenant_name}의 " if tenant_name else ""
 
         system_prompt = (
-            f"당신은 {tenant_name}의 민원 안내 AI입니다.\n"
+            f"당신은 {name_prefix}AI 안내 도우미입니다.\n"
             f"반드시 아래 근거 문서의 내용만을 바탕으로 답변하세요.\n"
             f"근거 없는 내용은 절대 추측하지 마세요.\n\n"
             f"근거 문서:\n{context_str}"
